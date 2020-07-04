@@ -144,7 +144,7 @@ export default class CreditCardInput extends Component {
       cardImageFront, cardImageBack, inputContainerStyle,
       values: { number, expiry, cvc, name, type }, focused,
       allowScroll, requiresName, requiresCVC, requiresPostalCode,
-      cardScale, cardFontFamily, cardBrandIcons, horizontal, expiryContainerStyle, cvcCtontainerStyle
+      cardScale, cardFontFamily, cardBrandIcons, horizontal, expiryContainerStyle, cvcContainerStyle
     } = this.props;
 
     return (
@@ -178,7 +178,7 @@ export default class CreditCardInput extends Component {
           {requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
               keyboardType="numeric"
-              containerStyle={[s.inputContainer, cvcCtontainerStyle, { width: CVC_INPUT_WIDTH }]} />}
+              containerStyle={[s.inputContainer, cvcContainerStyle, { width: CVC_INPUT_WIDTH }]} />}
 
           {requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
